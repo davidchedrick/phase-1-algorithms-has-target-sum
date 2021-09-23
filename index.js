@@ -1,13 +1,23 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (i = 0; i < array.length; i++){
+    const num = target - array[i]
+    for (let j = i + 1; j < array.length; j++){
+        if (array[j] === num)
+        return true
+    }
+ }
+ return false
 }
-
+hasTargetSum([3, 8, 12, 4, 11, 7], 10)
 /* 
-  Write the Big O time complexity of your function here
+  Write the Big O time complexity of your function here\
+  o(n^2)
 */
 
 /* 
   Add your pseudocode here
+  take first number add it to second, see if it adds to target if not
+  add first to third and so on until two numbers add to target 
 */
 
 /*
